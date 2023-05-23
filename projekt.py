@@ -49,7 +49,7 @@ def odszyfruj_AES():
         unpadded_message = unpad(decrypted_message, AES.block_size)
         T2.delete("1.0", END)
         T2.insert("1.0", unpadded_message.decode('utf-8'))
-
+ 
 # Funkcja wykonująca wybrane szyfrowanie lub deszyfrowanie
 def szyfruj():
     text = T1.get("1.0", END).strip()
